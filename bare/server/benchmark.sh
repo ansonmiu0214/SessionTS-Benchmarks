@@ -1,3 +1,4 @@
 #!/bin/bash
 
-MSGS=$1 npm start | tee logs/$1_$(date +%s).txt
+echo $1_$(date +%s) | pbcopy
+MSGS=$1 npm start | tee finelogs/$1_$(date +%s).txt

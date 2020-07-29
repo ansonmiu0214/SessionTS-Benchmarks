@@ -29,11 +29,15 @@ export default class Client extends React.Component<Props, State> {
     const ws = new WebSocket(this.props.endpoint);
 
     ws.onopen = () => {
-      this.state.button?.current?.click()
+      console.time('benchmark');
+      console.time(`pongping0`);
+      this.state.button?.current?.click();
     }
 
     ws.onmessage = ({ data }) => {
       const { label, payload } = JSON.parse(data);
+      console.timeLog('benchmark', payload[0]);
+      console.time(`pongping${payload[0]}`);
       if (label === 'PONG') {
         this.context.setCount(payload[0] as number, () => {
           this.state.button?.current?.click()
@@ -41,6 +45,8 @@ export default class Client extends React.Component<Props, State> {
       } else if (label === 'BYE') {
         this.context.setCount(payload[0] as number, () => {
           ws.close();
+          console.timeEnd(`pongping${payload[0]}`);
+          console.timeEnd('benchmark');
         });
       } else {
         throw new Error(`Unrecognised label: ${label}`);
@@ -58,6 +64,7 @@ export default class Client extends React.Component<Props, State> {
       label: 'PING',
       payload: [this.context.count],
     }))
+    console.timeEnd(`pongping${this.context.count}`);
   }
 
   render() {
