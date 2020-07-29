@@ -13,11 +13,9 @@ const wss = new WebSocket.Server({ server });
 
 const MSGS = Number(process.env.MSGS) || 10;
 
-const LABEL = 'benchmark';
-
 const logic: Implementation.Initial = new Implementation.Initial({
   PING: (count) => {
-    console.timeLog(LABEL, ++count);
+    console.time(`pingpong${++count}`);
     if (count === MSGS) {
       return new Implementation.S16([Labels.S16.BYE, [count], new Implementation.Terminal()]);
     } else {
@@ -34,7 +32,7 @@ const PORT = process.env.PORT || 8080;
 server.listen(PORT, () => {
   console.log(`Listening on port ${PORT}...`);
 
-  new Browser().visit('http://localhost:3000', () => {
-    console.log('Loaded page');
-  });
+  // new Browser().visit('http://localhost:3000', () => {
+  //   console.log('Loaded page');
+  // });
 });

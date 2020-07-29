@@ -205,6 +205,11 @@ class Session {
             }
         };
         this.roleToSocket[to].send(JSON.stringify(message), onError);
+
+        // << FOR BENCHMARKING
+        console.timeLog('benchmark', payload[0]);
+        console.timeEnd(`pingpong${payload[0]}`);
+        // FOR BENCHMARKING >>
     }
 
     receive(from: Roles.Peers) {

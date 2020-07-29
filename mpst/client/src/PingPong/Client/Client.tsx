@@ -119,6 +119,11 @@ class Client extends React.Component<Props & Transport, ComponentState> {
 
         // Send connection message
         ws.onopen = () => {
+            // << FOR BENCHMARKING
+            console.time('benchmark');
+            console.time('pongping0');
+            // FOR BENCHMARKING >>
+
             ws.send(JSON.stringify(Message.ConnectRequest));
         };
 
@@ -251,11 +256,18 @@ class Client extends React.Component<Props & Transport, ComponentState> {
 
     private sendMessage(role: Roles.Peers, label: string, payload: any, successor: State) {
         this.props.ws.send(JSON.stringify(Message.toChannel(role, label, payload)));
+        // << FOR BENCHMARKING
+        console.timeEnd(`pongping${payload[0]}`);
+        // FOR BENCHMARKING >>
         this.advance(successor);
     }
 
     private onReceiveMessage({ data }: MessageEvent) {
         const message = JSON.parse(data) as Message.Channel;
+        // << FOR BENCHMARKING
+        console.timeLog('benchmark', message.payload[0]);
+        console.time(`pongping${message.payload[0]}`);
+        // FOR BENCHMARKING >>
         const handler = this.handlerQueue[message.role].shift();
         if (handler !== undefined) {
             // Handler registered -- process.
@@ -286,6 +298,9 @@ class Client extends React.Component<Props & Transport, ComponentState> {
         switch (code) {
             case Cancellation.Receive.NORMAL: {
                 // Normal, clean cancellation
+                // << FOR BENCHMARKING
+                console.timeEnd('benchmark');
+                // FOR BENCHMARKING >>
                 return;
             }
             case Cancellation.Receive.SERVER_DISCONNECT: {
