@@ -1,0 +1,202 @@
+Client.tsx:67 pongping0: 2.038818359375ms
+​ benchmark: 6.69287109375ms 1
+​ pongping1: 1.186279296875ms
+​ benchmark: 10.994873046875ms 2
+​ pongping2: 0.492919921875ms
+​ benchmark: 12.724853515625ms 3
+​ pongping3: 0.43017578125ms
+​ benchmark: 14.06103515625ms 4
+Client.tsx:67 pongping4: 0.477783203125ms
+Client.tsx:39 benchmark: 15.322998046875ms 5
+Client.tsx:67 pongping5: 0.364013671875ms
+Client.tsx:39 benchmark: 16.641845703125ms 6
+Client.tsx:67 pongping6: 0.375244140625ms
+Client.tsx:39 benchmark: 18.2509765625ms 7
+Client.tsx:67 pongping7: 0.713134765625ms
+Client.tsx:39 benchmark: 20.003173828125ms 8
+Client.tsx:67 pongping8: 0.467041015625ms
+Client.tsx:39 benchmark: 21.10888671875ms 9
+Client.tsx:67 pongping9: 0.373779296875ms
+Client.tsx:39 benchmark: 22.81298828125ms 10
+Client.tsx:67 pongping10: 0.618896484375ms
+Client.tsx:39 benchmark: 25.0458984375ms 11
+Client.tsx:67 pongping11: 0.39111328125ms
+Client.tsx:39 benchmark: 26.510986328125ms 12
+Client.tsx:67 pongping12: 0.425048828125ms
+Client.tsx:39 benchmark: 27.73095703125ms 13
+Client.tsx:67 pongping13: 0.427001953125ms
+Client.tsx:39 benchmark: 29.218994140625ms 14
+Client.tsx:67 pongping14: 0.4609375ms
+Client.tsx:39 benchmark: 30.52001953125ms 15
+Client.tsx:67 pongping15: 0.384765625ms
+Client.tsx:39 benchmark: 31.52392578125ms 16
+Client.tsx:67 pongping16: 0.3408203125ms
+Client.tsx:39 benchmark: 32.538818359375ms 17
+Client.tsx:67 pongping17: 0.376220703125ms
+Client.tsx:39 benchmark: 33.52490234375ms 18
+Client.tsx:67 pongping18: 0.386962890625ms
+Client.tsx:39 benchmark: 34.805908203125ms 19
+Client.tsx:67 pongping19: 0.383056640625ms
+Client.tsx:39 benchmark: 35.92578125ms 20
+Client.tsx:67 pongping20: 0.462158203125ms
+Client.tsx:39 benchmark: 37.5009765625ms 21
+Client.tsx:67 pongping21: 0.514892578125ms
+Client.tsx:39 benchmark: 39.5888671875ms 22
+Client.tsx:67 pongping22: 0.379150390625ms
+Client.tsx:39 benchmark: 43.412841796875ms 23
+Client.tsx:67 pongping23: 0.332763671875ms
+Client.tsx:39 benchmark: 45.012939453125ms 24
+Client.tsx:67 pongping24: 0.375ms
+Client.tsx:39 benchmark: 46.277099609375ms 25
+Client.tsx:67 pongping25: 0.318115234375ms
+Client.tsx:39 benchmark: 47.375ms 26
+Client.tsx:67 pongping26: 0.38818359375ms
+Client.tsx:39 benchmark: 48.949951171875ms 27
+Client.tsx:67 pongping27: 0.35693359375ms
+Client.tsx:39 benchmark: 50.325927734375ms 28
+Client.tsx:67 pongping28: 0.59375ms
+Client.tsx:39 benchmark: 51.930908203125ms 29
+Client.tsx:67 pongping29: 0.377685546875ms
+Client.tsx:39 benchmark: 53.010009765625ms 30
+Client.tsx:67 pongping30: 0.3466796875ms
+Client.tsx:39 benchmark: 54.029052734375ms 31
+Client.tsx:67 pongping31: 0.74609375ms
+Client.tsx:39 benchmark: 56.838134765625ms 32
+Client.tsx:67 pongping32: 0.494140625ms
+​ benchmark: 58.9208984375ms 33
+​ pongping33: 0.417724609375ms
+​ benchmark: 60.659912109375ms 34
+​ pongping34: 0.490966796875ms
+​ benchmark: 62.212890625ms 35
+​ pongping35: 0.367919921875ms
+​ benchmark: 63.3759765625ms 36
+​ pongping36: 0.31103515625ms
+​ benchmark: 64.285888671875ms 37
+​ pongping37: 0.31884765625ms
+​ benchmark: 65.47802734375ms 38
+​ pongping38: 0.4208984375ms
+​ benchmark: 66.696044921875ms 39
+​ pongping39: 0.568359375ms
+​ benchmark: 68.425048828125ms 40
+​ pongping40: 0.573974609375ms
+​ benchmark: 70.77783203125ms 41
+​ pongping41: 0.629150390625ms
+​ benchmark: 73.67578125ms 42
+​ pongping42: 0.35498046875ms
+​ benchmark: 76.6220703125ms 43
+​ pongping43: 0.38818359375ms
+​ benchmark: 78.486083984375ms 44
+​ pongping44: 0.3349609375ms
+​ benchmark: 80.3388671875ms 45
+​ pongping45: 0.369140625ms
+​ benchmark: 82.026123046875ms 46
+​ pongping46: 0.339111328125ms
+​ benchmark: 83.302001953125ms 47
+​ pongping47: 0.333984375ms
+​ benchmark: 85.48681640625ms 48
+​ pongping48: 0.381103515625ms
+Client.tsx:39 benchmark: 87.635986328125ms 49
+Client.tsx:67 pongping49: 0.5048828125ms
+Client.tsx:39 benchmark: 93.951904296875ms 50
+Client.tsx:67 pongping50: 0.387939453125ms
+Client.tsx:39 benchmark: 97.989013671875ms 51
+Client.tsx:67 pongping51: 0.428955078125ms
+Client.tsx:39 benchmark: 99.6640625ms 52
+Client.tsx:67 pongping52: 0.330078125ms
+Client.tsx:39 benchmark: 101.028076171875ms 53
+Client.tsx:67 pongping53: 0.3681640625ms
+Client.tsx:39 benchmark: 104.5439453125ms 54
+Client.tsx:67 pongping54: 0.567138671875ms
+Client.tsx:39 benchmark: 108.501953125ms 55
+Client.tsx:67 pongping55: 0.41796875ms
+Client.tsx:39 benchmark: 111.171142578125ms 56
+Client.tsx:67 pongping56: 0.337158203125ms
+Client.tsx:39 benchmark: 112.887939453125ms 57
+Client.tsx:67 pongping57: 0.50390625ms
+Client.tsx:39 benchmark: 114.641845703125ms 58
+Client.tsx:67 pongping58: 0.3330078125ms
+Client.tsx:39 benchmark: 116.016845703125ms 59
+Client.tsx:67 pongping59: 0.35009765625ms
+Client.tsx:39 benchmark: 117.455078125ms 60
+Client.tsx:67 pongping60: 0.331787109375ms
+Client.tsx:39 benchmark: 119.087890625ms 61
+Client.tsx:67 pongping61: 0.440185546875ms
+Client.tsx:39 benchmark: 120.5458984375ms 62
+Client.tsx:67 pongping62: 0.48486328125ms
+Client.tsx:39 benchmark: 122.68994140625ms 63
+Client.tsx:67 pongping63: 0.416015625ms
+Client.tsx:39 benchmark: 125.0068359375ms 64
+Client.tsx:67 pongping64: 0.41796875ms
+Client.tsx:39 benchmark: 126.786865234375ms 65
+Client.tsx:67 pongping65: 0.39404296875ms
+Client.tsx:39 benchmark: 127.966796875ms 66
+Client.tsx:67 pongping66: 0.36181640625ms
+Client.tsx:39 benchmark: 129.003173828125ms 67
+Client.tsx:67 pongping67: 0.337890625ms
+Client.tsx:39 benchmark: 130.176025390625ms 68
+Client.tsx:67 pongping68: 0.31005859375ms
+Client.tsx:39 benchmark: 131.19287109375ms 69
+Client.tsx:67 pongping69: 0.324951171875ms
+Client.tsx:39 benchmark: 132.638916015625ms 70
+Client.tsx:67 pongping70: 0.4189453125ms
+Client.tsx:39 benchmark: 133.7109375ms 71
+Client.tsx:67 pongping71: 0.3408203125ms
+Client.tsx:39 benchmark: 134.765869140625ms 72
+Client.tsx:67 pongping72: 0.343994140625ms
+Client.tsx:39 benchmark: 135.98291015625ms 73
+Client.tsx:67 pongping73: 0.842041015625ms
+Client.tsx:39 benchmark: 138.0810546875ms 74
+Client.tsx:67 pongping74: 0.618896484375ms
+Client.tsx:39 benchmark: 140.2490234375ms 75
+Client.tsx:67 pongping75: 0.418212890625ms
+Client.tsx:39 benchmark: 142.3828125ms 76
+Client.tsx:67 pongping76: 0.431884765625ms
+Client.tsx:39 benchmark: 143.9169921875ms 77
+Client.tsx:67 pongping77: 0.34228515625ms
+Client.tsx:39 benchmark: 145.135986328125ms 78
+Client.tsx:67 pongping78: 0.322021484375ms
+Client.tsx:39 benchmark: 146.4189453125ms 79
+Client.tsx:67 pongping79: 0.4609375ms
+Client.tsx:39 benchmark: 148.0830078125ms 80
+Client.tsx:67 pongping80: 0.308837890625ms
+Client.tsx:39 benchmark: 149.123046875ms 81
+Client.tsx:67 pongping81: 0.31005859375ms
+Client.tsx:39 benchmark: 150.11279296875ms 82
+Client.tsx:67 pongping82: 0.308837890625ms
+Client.tsx:39 benchmark: 151.23291015625ms 83
+Client.tsx:67 pongping83: 0.337890625ms
+Client.tsx:39 benchmark: 152.762939453125ms 84
+Client.tsx:67 pongping84: 0.424072265625ms
+Client.tsx:39 benchmark: 154.7119140625ms 85
+Client.tsx:67 pongping85: 0.369140625ms
+Client.tsx:39 benchmark: 157.81201171875ms 86
+Client.tsx:67 pongping86: 0.500732421875ms
+Client.tsx:39 benchmark: 160.410888671875ms 87
+Client.tsx:67 pongping87: 0.947998046875ms
+Client.tsx:39 benchmark: 162.323974609375ms 88
+Client.tsx:67 pongping88: 0.477783203125ms
+Client.tsx:39 benchmark: 164.026123046875ms 89
+Client.tsx:67 pongping89: 0.326904296875ms
+Client.tsx:39 benchmark: 165.39794921875ms 90
+Client.tsx:67 pongping90: 0.36865234375ms
+Client.tsx:39 benchmark: 166.5791015625ms 91
+Client.tsx:67 pongping91: 0.348876953125ms
+Client.tsx:39 benchmark: 167.94091796875ms 92
+Client.tsx:67 pongping92: 0.402099609375ms
+Client.tsx:39 benchmark: 170.080078125ms 93
+Client.tsx:67 pongping93: 0.3779296875ms
+Client.tsx:39 benchmark: 172.262939453125ms 94
+Client.tsx:67 pongping94: 0.43798828125ms
+Client.tsx:39 benchmark: 175.092041015625ms 95
+Client.tsx:67 pongping95: 0.5908203125ms
+Client.tsx:39 benchmark: 177.52880859375ms 96
+Client.tsx:67 pongping96: 0.340087890625ms
+Client.tsx:39 benchmark: 179.010009765625ms 97
+Client.tsx:67 pongping97: 0.307861328125ms
+Client.tsx:39 benchmark: 180.255859375ms 98
+Client.tsx:67 pongping98: 0.318115234375ms
+Client.tsx:39 benchmark: 181.6640625ms 99
+Client.tsx:67 pongping99: 0.3349609375ms
+Client.tsx:39 benchmark: 182.755126953125ms 100
+Client.tsx:48 pongping100: 0.209716796875ms
+Client.tsx:49 benchmark: 183.2138671875ms
