@@ -1,0 +1,206 @@
+
+> server@1.0.0 start /Users/Anson/Projects/2020_UROP/SessionTS-Benchmarks/complex_pingpong/bare/server
+> node build/app.js
+
+Listening on port 8080...
+benchmark: 9.224ms 1
+pingpong1: 1.779ms
+benchmark: 13.652ms 2
+pingpong2: 0.220ms
+benchmark: 16.766ms 3
+pingpong3: 0.190ms
+benchmark: 18.617ms 4
+pingpong4: 0.436ms
+benchmark: 20.186ms 5
+pingpong5: 0.176ms
+benchmark: 22.474ms 6
+pingpong6: 0.204ms
+benchmark: 24.415ms 7
+pingpong7: 0.216ms
+benchmark: 26.822ms 8
+pingpong8: 0.152ms
+benchmark: 28.293ms 9
+pingpong9: 0.170ms
+benchmark: 32.125ms 10
+pingpong10: 0.170ms
+benchmark: 33.656ms 11
+pingpong11: 0.136ms
+benchmark: 35.475ms 12
+pingpong12: 0.152ms
+benchmark: 38.686ms 13
+pingpong13: 0.158ms
+benchmark: 40.298ms 14
+pingpong14: 0.138ms
+benchmark: 41.910ms 15
+pingpong15: 0.131ms
+benchmark: 43.992ms 16
+pingpong16: 0.395ms
+benchmark: 46.347ms 17
+pingpong17: 0.333ms
+benchmark: 49.738ms 18
+pingpong18: 0.144ms
+benchmark: 51.159ms 19
+pingpong19: 0.215ms
+benchmark: 53.349ms 20
+pingpong20: 0.213ms
+benchmark: 55.645ms 21
+pingpong21: 0.129ms
+benchmark: 57.155ms 22
+pingpong22: 0.142ms
+benchmark: 58.711ms 23
+pingpong23: 0.121ms
+benchmark: 60.550ms 24
+pingpong24: 0.477ms
+benchmark: 62.862ms 25
+pingpong25: 0.177ms
+benchmark: 64.986ms 26
+pingpong26: 0.311ms
+benchmark: 67.959ms 27
+pingpong27: 0.143ms
+benchmark: 70.243ms 28
+pingpong28: 0.166ms
+benchmark: 72.203ms 29
+pingpong29: 0.151ms
+benchmark: 74.531ms 30
+pingpong30: 0.203ms
+benchmark: 76.376ms 31
+pingpong31: 0.296ms
+benchmark: 78.661ms 32
+pingpong32: 0.137ms
+benchmark: 81.617ms 33
+pingpong33: 0.123ms
+benchmark: 84.077ms 34
+pingpong34: 0.134ms
+benchmark: 86.468ms 35
+pingpong35: 0.128ms
+benchmark: 89.242ms 36
+pingpong36: 0.144ms
+benchmark: 91.305ms 37
+pingpong37: 0.250ms
+benchmark: 93.450ms 38
+pingpong38: 0.121ms
+benchmark: 95.116ms 39
+pingpong39: 0.151ms
+benchmark: 96.604ms 40
+pingpong40: 0.115ms
+benchmark: 98.346ms 41
+pingpong41: 0.143ms
+benchmark: 99.743ms 42
+pingpong42: 0.156ms
+benchmark: 101.180ms 43
+pingpong43: 0.112ms
+benchmark: 102.437ms 44
+pingpong44: 0.119ms
+benchmark: 104.295ms 45
+pingpong45: 0.115ms
+benchmark: 111.804ms 46
+pingpong46: 0.173ms
+benchmark: 120.899ms 47
+pingpong47: 0.119ms
+benchmark: 125.027ms 48
+pingpong48: 0.140ms
+benchmark: 126.237ms 49
+pingpong49: 0.152ms
+benchmark: 129.315ms 50
+pingpong50: 0.200ms
+benchmark: 132.239ms 51
+pingpong51: 0.173ms
+benchmark: 133.559ms 52
+pingpong52: 0.176ms
+benchmark: 135.079ms 53
+pingpong53: 0.211ms
+benchmark: 137.073ms 54
+pingpong54: 0.171ms
+benchmark: 138.862ms 55
+pingpong55: 0.143ms
+benchmark: 140.734ms 56
+pingpong56: 0.132ms
+benchmark: 143.129ms 57
+pingpong57: 0.199ms
+benchmark: 145.027ms 58
+pingpong58: 0.123ms
+benchmark: 148.497ms 59
+pingpong59: 0.119ms
+benchmark: 151.117ms 60
+pingpong60: 0.127ms
+benchmark: 153.081ms 61
+pingpong61: 0.130ms
+benchmark: 155.383ms 62
+pingpong62: 0.127ms
+benchmark: 157.528ms 63
+pingpong63: 0.169ms
+benchmark: 160.087ms 64
+pingpong64: 0.267ms
+benchmark: 162.357ms 65
+pingpong65: 0.160ms
+benchmark: 165.690ms 66
+pingpong66: 0.143ms
+benchmark: 167.279ms 67
+pingpong67: 0.114ms
+benchmark: 169.315ms 68
+pingpong68: 0.134ms
+benchmark: 172.213ms 69
+pingpong69: 0.143ms
+benchmark: 173.833ms 70
+pingpong70: 0.145ms
+benchmark: 175.937ms 71
+pingpong71: 0.142ms
+benchmark: 178.579ms 72
+pingpong72: 0.133ms
+benchmark: 179.637ms 73
+pingpong73: 0.139ms
+benchmark: 180.961ms 74
+pingpong74: 0.127ms
+benchmark: 182.222ms 75
+pingpong75: 0.210ms
+benchmark: 183.294ms 76
+pingpong76: 0.139ms
+benchmark: 184.139ms 77
+pingpong77: 0.105ms
+benchmark: 185.517ms 78
+pingpong78: 0.179ms
+benchmark: 187.336ms 79
+pingpong79: 0.217ms
+benchmark: 188.872ms 80
+pingpong80: 0.170ms
+benchmark: 189.912ms 81
+pingpong81: 0.141ms
+benchmark: 191.209ms 82
+pingpong82: 0.129ms
+benchmark: 192.399ms 83
+pingpong83: 0.205ms
+benchmark: 193.981ms 84
+pingpong84: 0.304ms
+benchmark: 195.314ms 85
+pingpong85: 0.177ms
+benchmark: 197.299ms 86
+pingpong86: 0.120ms
+benchmark: 198.639ms 87
+pingpong87: 0.117ms
+benchmark: 199.757ms 88
+pingpong88: 0.206ms
+benchmark: 200.929ms 89
+pingpong89: 0.133ms
+benchmark: 201.927ms 90
+pingpong90: 0.113ms
+benchmark: 203.101ms 91
+pingpong91: 0.146ms
+benchmark: 204.797ms 92
+pingpong92: 0.129ms
+benchmark: 206.015ms 93
+pingpong93: 0.137ms
+benchmark: 207.122ms 94
+pingpong94: 0.164ms
+benchmark: 208.867ms 95
+pingpong95: 0.231ms
+benchmark: 209.904ms 96
+pingpong96: 0.247ms
+benchmark: 211.454ms 97
+pingpong97: 0.118ms
+benchmark: 212.994ms 98
+pingpong98: 0.187ms
+benchmark: 214.700ms 99
+pingpong99: 0.121ms
+benchmark: 215.764ms 100
+pingpong100: 0.135ms
+benchmark: 218.604ms
