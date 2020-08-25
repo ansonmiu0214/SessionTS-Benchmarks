@@ -7,7 +7,6 @@ export default class Terminal extends S6 {
     return (
       <div>
         <button>Ping</button>
-        <p>All pongs received</p>
       </div>
     )
   }

@@ -29,9 +29,6 @@ export default class Send extends S5<State> {
         <button ref={this.state.button}>
           Ping
         </button>
-        <p>
-          Ready to Ping
-        </p>
       </Ping>
     );
   }

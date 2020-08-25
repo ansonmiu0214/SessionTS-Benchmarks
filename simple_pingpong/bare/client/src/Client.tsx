@@ -9,8 +9,6 @@ type State = {
   ws?: WebSocket,
   button: React.RefObject<HTMLButtonElement>,
   count: number,
-  ready: boolean,
-  end: boolean,
 }
 
 export default class Client extends React.Component<Props, State> {
@@ -24,8 +22,6 @@ export default class Client extends React.Component<Props, State> {
       ws: undefined,
       button: React.createRef(),
       count: 0,
-      ready: false,
-      end: false,
     }
   }
 
@@ -35,10 +31,7 @@ export default class Client extends React.Component<Props, State> {
     ws.onopen = () => {
       console.time('benchmark');
       console.time(`pongping0`);
-      this.setState({ ready: true, }, () => {
-        this.state.button?.current?.click();
-        this.setState({ ready: false, });
-      });
+      this.state.button?.current?.click();
     }
 
     ws.onmessage = ({ data }) => {
@@ -46,20 +39,15 @@ export default class Client extends React.Component<Props, State> {
       console.timeLog('benchmark', payload[0]);
       console.time(`pongping${payload[0]}`);
       if (label === 'PONG') {
-        this.setState({ ready: true, }, () => {
-          this.context.setCount(payload[0] as number, () => {
-            this.state.button?.current?.click();
-            this.setState({ ready: false, });
-          });
+        this.context.setCount(payload[0] as number, () => {
+          this.state.button?.current?.click();
         });
       } else if (label === 'BYE') {
-        this.setState({ end: true, }, () => {
-          this.context.setCount(payload[0] as number, () => {
-            ws.close();
-            console.timeEnd(`pongping${payload[0]}`);
-            console.timeEnd('benchmark');
-          });
-        })
+        this.context.setCount(payload[0] as number, () => {
+          ws.close();
+          console.timeEnd(`pongping${payload[0]}`);
+          console.timeEnd('benchmark');
+        });
       } else {
         throw new Error(`Unrecognised label: ${label}`);
       }
@@ -88,12 +76,6 @@ export default class Client extends React.Component<Props, State> {
           >
           Ping
         </button>
-
-        {this.state.ready &&
-          <p>Ready to ping</p>}
-
-        {this.state.end &&
-          <p>All pongs received</p>}
       </div>
     );
   }
