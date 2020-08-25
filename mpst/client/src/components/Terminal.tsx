@@ -1,11 +1,14 @@
 import React from 'react';
-import S6 from '../PingPong/Client/S6';
+import { S6 } from '../PingPong/Client';
 
 export default class Terminal extends S6 {
 
   render() {
     return (
-      <button>Ping</button>
+      <div>
+        <button>Ping</button>
+        <p>All pongs received</p>
+      </div>
     )
   }
   

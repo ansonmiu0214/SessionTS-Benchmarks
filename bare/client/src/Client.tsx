@@ -8,7 +8,9 @@ type Props = {
 type State = {
   ws?: WebSocket,
   button: React.RefObject<HTMLButtonElement>,
-  count: number
+  count: number,
+  ready: boolean,
+  end: boolean,
 }
 
 export default class Client extends React.Component<Props, State> {
@@ -22,6 +24,8 @@ export default class Client extends React.Component<Props, State> {
       ws: undefined,
       button: React.createRef(),
       count: 0,
+      ready: false,
+      end: false,
     }
   }
 
@@ -31,7 +35,10 @@ export default class Client extends React.Component<Props, State> {
     ws.onopen = () => {
       console.time('benchmark');
       console.time(`pongping0`);
-      this.state.button?.current?.click();
+      this.setState({ ready: true, }, () => {
+        this.state.button?.current?.click();
+        this.setState({ ready: false, });
+      });
     }
 
     ws.onmessage = ({ data }) => {
@@ -39,15 +46,20 @@ export default class Client extends React.Component<Props, State> {
       console.timeLog('benchmark', payload[0]);
       console.time(`pongping${payload[0]}`);
       if (label === 'PONG') {
-        this.context.setCount(payload[0] as number, () => {
-          this.state.button?.current?.click()
+        this.setState({ ready: true, }, () => {
+          this.context.setCount(payload[0] as number, () => {
+            this.state.button?.current?.click();
+            this.setState({ ready: false, });
+          });
         });
       } else if (label === 'BYE') {
-        this.context.setCount(payload[0] as number, () => {
-          ws.close();
-          console.timeEnd(`pongping${payload[0]}`);
-          console.timeEnd('benchmark');
-        });
+        this.setState({ end: true, }, () => {
+          this.context.setCount(payload[0] as number, () => {
+            ws.close();
+            console.timeEnd(`pongping${payload[0]}`);
+            console.timeEnd('benchmark');
+          });
+        })
       } else {
         throw new Error(`Unrecognised label: ${label}`);
       }
@@ -69,12 +81,20 @@ export default class Client extends React.Component<Props, State> {
 
   render() {
     return (
-      <button
-        ref={this.state.button}
-        onClick={this.click.bind(this)}
-        >
-        Ping
-      </button>
+      <div>
+        <button
+          ref={this.state.button}
+          onClick={this.click.bind(this)}
+          >
+          Ping
+        </button>
+
+        {this.state.ready &&
+          <p>Ready to ping</p>}
+
+        {this.state.end &&
+          <p>All pongs received</p>}
+      </div>
     );
   }
 }

@@ -2,10 +2,9 @@ import express from 'express';
 import WebSocket from 'ws';
 import http from 'http';
 
-const Browser = require('zombie');
+// const Browser = require('zombie');
 
-import { Svr } from './PingPong/Svr';
-import { Implementation, Labels } from './PingPong/EFSM';
+import { Svr, Session } from './PingPong/Svr';
 
 const app = express();
 const server = http.createServer(app);
@@ -13,20 +12,20 @@ const wss = new WebSocket.Server({ server });
 
 const MSGS = Number(process.env.MSGS) || 10;
 
-const logic: Implementation.Initial = new Implementation.Initial({
-  PING: (count) => {
+const logic = Session.Initial({
+  PING: (Next, count) => {
     console.time(`pingpong${++count}`);
     if (count === MSGS) {
-      return new Implementation.S16([Labels.S16.BYE, [count], new Implementation.Terminal()]);
+      return Next.BYE([count], Session.Terminal);
     } else {
-      return new Implementation.S16([Labels.S16.PONG, [count], logic]);
+      return Next.PONG([count], logic);
     }
   }
 });
 
-new Svr(wss, logic, (role, reason) => {
+new Svr(wss, (role, reason) => {
   console.error(`${role} cancelled because of ${reason}`);
-});
+}, (sessionID) => logic);
 
 const PORT = process.env.PORT || 8080;
 server.listen(PORT, () => {

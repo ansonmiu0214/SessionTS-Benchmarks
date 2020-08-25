@@ -26,11 +26,11 @@ enum Labels {
     PONG = 'PONG', BYE = 'BYE',
 }
 
-type PONGMessage = {
+interface PONGMessage {
     label: Labels.PONG,
     payload: [number],
 };
-type BYEMessage = {
+interface BYEMessage {
     label: Labels.BYE,
     payload: [number],
 };
@@ -46,6 +46,12 @@ type Props = {
     register: (role: Roles.Peers, handle: ReceiveHandler) => void
 };
 
+/**
+ * __Receives from Svr.__ Possible messages:
+ *
+ * * __PONG__(number)
+ * * __BYE__(number)
+ */
 export default abstract class S7<ComponentState = {}> extends React.Component<Props, ComponentState>
 {
 
@@ -86,5 +92,7 @@ export default abstract class S7<ComponentState = {}> extends React.Component<Pr
         }
     }
 
-    abstract PONG(payload1: number, ): MaybePromise<void>; abstract BYE(payload1: number, ): MaybePromise<void>;
+    abstract PONG(payload1: number, ): MaybePromise<void>;
+    abstract BYE(payload1: number, ): MaybePromise<void>;
+
 }

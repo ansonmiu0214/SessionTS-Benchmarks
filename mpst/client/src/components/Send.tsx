@@ -1,5 +1,5 @@
 import React from 'react';
-import S5 from '../PingPong/Client/S5';
+import { S5 } from '../PingPong/Client';
 import BenchmarkContext from '../Benchmark';
 
 type State = {
@@ -29,6 +29,9 @@ export default class Send extends S5<State> {
         <button ref={this.state.button}>
           Ping
         </button>
+        <p>
+          Ready to Ping
+        </p>
       </Ping>
     );
   }

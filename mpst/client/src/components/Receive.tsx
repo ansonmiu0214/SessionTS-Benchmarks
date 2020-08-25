@@ -1,5 +1,5 @@
 import React from 'react';
-import S7 from '../PingPong/Client/S7';
+import { S7 } from '../PingPong/Client';
 import BenchmarkContext from '../Benchmark';
 
 export default class Receive extends S7 {

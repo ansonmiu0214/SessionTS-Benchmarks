@@ -224,7 +224,9 @@ class Client extends React.Component<Props & Transport, ComponentState> {
                         }
                     };
 
-                    return <div {...props}>{this.props.children}</div>;
+                    return React.Children.map(this.props.children, child => (
+                        React.cloneElement(child as React.ReactElement, props)
+                    ));
                 }
             }
         }
@@ -256,18 +258,22 @@ class Client extends React.Component<Props & Transport, ComponentState> {
 
     private sendMessage(role: Roles.Peers, label: string, payload: any, successor: State) {
         this.props.ws.send(JSON.stringify(Message.toChannel(role, label, payload)));
+
         // << FOR BENCHMARKING
         console.timeEnd(`pongping${payload[0]}`);
         // FOR BENCHMARKING >>
+
         this.advance(successor);
     }
 
     private onReceiveMessage({ data }: MessageEvent) {
         const message = JSON.parse(data) as Message.Channel;
+
         // << FOR BENCHMARKING
         console.timeLog('benchmark', message.payload[0]);
         console.time(`pongping${message.payload[0]}`);
         // FOR BENCHMARKING >>
+
         const handler = this.handlerQueue[message.role].shift();
         if (handler !== undefined) {
             // Handler registered -- process.
@@ -295,12 +301,13 @@ class Client extends React.Component<Props & Transport, ComponentState> {
     // ============
 
     private onClose({ code, reason }: CloseEvent) {
+        // << FOR BENCHMARKING
+        console.timeEnd('benchmark');
+        // FOR BENCHMARKING >>
+        
         switch (code) {
             case Cancellation.Receive.NORMAL: {
                 // Normal, clean cancellation
-                // << FOR BENCHMARKING
-                console.timeEnd('benchmark');
-                // FOR BENCHMARKING >>
                 return;
             }
             case Cancellation.Receive.SERVER_DISCONNECT: {

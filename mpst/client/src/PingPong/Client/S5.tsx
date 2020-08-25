@@ -23,6 +23,11 @@ type Props = {
     factory: SendComponentFactoryFactory
 }
 
+/**
+ * __Sends to  Svr.__ Possible messages:
+ *
+ * * __PING__(number)
+ */
 export default abstract class S5<ComponentState = {}> extends React.Component<Props, ComponentState>
 {
 

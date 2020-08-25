@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import Client from './PingPong/Client/Client';
+import { Client } from './PingPong/Client';
 import BenchmarkContext, { Benchmark } from './Benchmark';
 import Send from './components/Send';
 import Terminal from './components/Terminal';

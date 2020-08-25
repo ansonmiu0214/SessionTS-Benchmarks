@@ -8,6 +8,9 @@ type Props = {
     terminate: () => void,
 };
 
+/**
+ * __Terminal state__.
+ */
 export default abstract class S6<ComponentState = {}> extends React.Component<Props, ComponentState> {
 
     componentDidMount() {
